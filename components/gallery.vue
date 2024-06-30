@@ -27,6 +27,12 @@ export default {
 <style lang="pcss" scoped>
 .gallery {
   overflow: hidden;
+
+  &:hover {
+    .gallery-animation {
+      animation-play-state: paused;
+    }
+  }
 }
 
 .gallery-animation {
