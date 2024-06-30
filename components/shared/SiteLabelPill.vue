@@ -7,11 +7,6 @@
 <script>
 import { ref, onMounted } from "vue";
 
-import gsap from "gsap";
-import { Flip } from "gsap/all";
-
-gsap.registerPlugin(Flip);
-
 export default {
   setup() {
     const SiteLabelPill = ref(null);
@@ -26,9 +21,7 @@ export default {
 
     function rotateWords() {
       currentIndex = (currentIndex + 1) % rotationWords.length;
-      const state = Flip.getState(SiteLabelPill.value);
       SiteLabelPill.value.textContent = rotationWords[currentIndex];
-      Flip.from(state);
     }
 
     onMounted(() => {
