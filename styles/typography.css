@@ -1,0 +1,36 @@
+/* headings */
+h1.c-heading {
+  font-size: 96px;
+  line-height: 1.07;
+}
+
+h2.c-heading {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  h1.c-heading {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  h2.c-heading {
+    font-size: 18px;
+  }
+}
+
+/* end headings */
+
+/* body */
+p.c-body {
+  font-size: 20px;
+  color: var(--c-grey);
+}
+
+@media screen and (max-width: 1024px) {
+  p.c-body {
+    font-size: 16px;
+  }
+}
+
+/* end body */

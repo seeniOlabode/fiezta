@@ -1,0 +1,13 @@
+.c-button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.c-button.primary {
+  background-color: var(--c-red);
+  color: white;
+  border-radius: 999px;
+  padding: 0 20px;
+  height: 35px;
+}

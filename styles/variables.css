@@ -1,0 +1,14 @@
+:root {
+  --c-red: #cc2229;
+  --c-dark: #111111;
+  --c-stroke: #eeeeee;
+  --c-grey: #666666;
+
+  --sm-spacing: 10px;
+
+  --sm-speed: 0.3s;
+
+  --t-0: 14px;
+  --t-1: 16px;
+  --t-2: calc(var(--t-1) * 2);
+}
