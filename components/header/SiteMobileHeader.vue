@@ -2,7 +2,9 @@
   <header class="site-header" :class="{ 'menu-open': menuOpen }">
     <div class="site-header__content">
       <div class="site-header__top spaced">
-        <div class="logo"></div>
+        <div class="logo">
+          <img src="/fiezta-logo.png" />
+        </div>
         <button
           class="site-header__menu-button"
           :class="{ 'menu-open': menuOpen }"
@@ -21,6 +23,7 @@
           v-for="(link, i) in links"
           class="site-nav__link"
           :key="link"
+          @click="contactUs"
         >
           <img class="link-icon" src="/icons/up-right-small.svg" />
           <span class="link__text-content">
@@ -35,6 +38,8 @@
 </template>
 
 <script>
+import { contactUs } from "#imports";
+
 export default {
   data() {
     return {
@@ -42,16 +47,20 @@ export default {
       links: ["Traveling", "Entertainment", "Rentals", "Vlogs"],
     };
   },
+  methods: {
+    contactUs,
+  },
 };
 </script>
 
 <style lang="pcss" scoped>
 .site-header {
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
   right: 0;
   display: none;
+  z-index: 100;
 }
 
 .site-header__content {
@@ -187,6 +196,12 @@ export default {
   display: inline-block;
   transform: translateX(0);
   transition: transform var(--sm-speed);
+
+  &::after {
+    content: " (coming soon)";
+    opacity: 0.4;
+    font-size: 90%;
+  }
 }
 
 .site-nav.menu-open {
@@ -248,6 +263,16 @@ export default {
   }
   .site-nav__link {
     font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .site-nav__link {
+    font-size: 20px;
+  }
+
+  .site-nav.menu-open {
+    height: 150px;
   }
 }
 </style>

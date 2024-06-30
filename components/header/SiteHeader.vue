@@ -1,8 +1,12 @@
 <template>
   <header class="site-header spaced">
-    <div class="logo"></div>
+    <div class="logo">
+      <img src="/fiezta-logo.png" />
+    </div>
     <nav class="site-header__nav">
-      <a class="c-link" v-for="link in links" :key="link">{{ link }}</a>
+      <a @click="contactUs" class="c-link" v-for="link in links" :key="link">{{
+        link
+      }}</a>
     </nav>
     <button class="c-button primary site-header__contact-button">
       Contact Us
@@ -11,11 +15,16 @@
 </template>
 
 <script>
+import { contactUs } from "#imports";
+
 export default {
   data() {
     return {
       links: ["Traveling", "Entertainment", "Rentals", "Vlogs"],
     };
+  },
+  methods: {
+    contactUs,
   },
 };
 </script>
@@ -26,17 +35,18 @@ export default {
   align-items: center;
   gap: 40px;
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
   right: 0;
   border-bottom: solid 1px var(--c-stroke);
   display: none;
   background-color: white;
+  z-index: 100;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: var(--c-red);
   border-radius: 999px;
 }

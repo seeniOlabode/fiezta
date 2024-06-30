@@ -10,4 +10,25 @@
   border-radius: 999px;
   padding: 0 20px;
   height: 35px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.c-button.primary::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--c-dark);
+  transform: translateY(100%);
+  transition: transform var(--sm-speed);
+  z-index: -1;
+}
+
+.c-button.primary:hover::before {
+  transform: translateY(0%);
 }

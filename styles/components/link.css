@@ -10,7 +10,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 1.5px;
   background-color: var(--c-dark);
   transform: translate(-100%);
   transition: transform var(--sm-speed);

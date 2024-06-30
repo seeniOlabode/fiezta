@@ -5,10 +5,12 @@
 </template>
 
 <script>
+import { contactUs } from "#imports";
+
 export default {
   methods: {
     contact() {
-      console.log("contact");
+      contactUs();
     },
   },
 };

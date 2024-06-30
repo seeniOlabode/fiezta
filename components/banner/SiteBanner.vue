@@ -1,7 +1,10 @@
 <template>
   <section class="site-banner spaced">
-    <div class="site-banner__label-pill">Coming Soon</div>
-    <h1 class="c-heading">Fiezta, concierge on wheels</h1>
+    <div class="site-banner__label-pill">{{ rotationWords[currentIndex] }}</div>
+    <h1 class="c-heading">
+      Fiezta, concierge on wheels <br />
+      (under maintenance)
+    </h1>
     <p class="c-body site-banner__sub-title">
       From Entertainment to Travel, We've Got You Covered!!
     </p>
@@ -20,12 +23,19 @@ export default {
   },
   data() {
     return {
-      // rotationWords: ["Entertainment", "Travel", "Music", "Rentals", "Booken"],
+      rotationWords: [
+        "Entertainment",
+        "Travel",
+        "Music",
+        "Rentals",
+        "Booking",
+        "Coming Soon",
+      ],
       currentIndex: 0,
     };
   },
   mounted() {
-    // this.startRotateWords();
+    this.startRotateWords();
   },
   methods: {
     startRotateWords() {
@@ -39,7 +49,7 @@ export default {
 
 <style scoped>
 .site-banner {
-  padding: 160px var(--sm-spacing) 100px var(--sm-spacing);
+  padding: 200px var(--sm-spacing) 100px var(--sm-spacing);
   text-align: center;
 }
 
@@ -66,7 +76,7 @@ export default {
 
 @media screen and (max-width: 1024px) {
   .site-banner {
-    padding: 100px 0 50px 0;
+    padding: 140px 0 50px 0;
   }
   .site-banner__sub-title {
     margin-top: 10px;

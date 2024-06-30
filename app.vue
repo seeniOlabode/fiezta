@@ -1,12 +1,13 @@
 <template>
   <div>
+    <site-announcements />
     <site-mobile-header />
     <site-header />
     <main>
       <site-banner />
+      <gallery />
       <!-- <site-services /> -->
     </main>
-    <div class="welcome">welcome to the world</div>
   </div>
 </template>
 
@@ -16,6 +17,8 @@ import SiteMobileHeader from "./components/header/SiteMobileHeader.vue";
 import SiteHeader from "./components/header/SiteHeader.vue";
 import SiteBanner from "./components/banner/SiteBanner.vue";
 import SiteServices from "./components/services/SiteServices.vue";
+import SiteAnnouncements from "./components/announcements/SiteAnnouncements.vue";
+import Gallery from "./components/gallery.vue";
 
 export default defineComponent({
   components: {
@@ -23,10 +26,12 @@ export default defineComponent({
     SiteHeader,
     SiteBanner,
     SiteServices,
+    SiteAnnouncements,
+    Gallery,
   },
   setup() {
     useHead({
-      title: "Fiezta, Concierge on wheels",
+      title: "Site Under Maintenance",
       htmlAttrs: {
         lang: "en",
       },
@@ -44,6 +49,11 @@ export default defineComponent({
           href: "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap",
           rel: "stylesheet",
         },
+        {
+          href: "/fiezta-logo.png",
+          rel: "icon",
+          type: "image/png",
+        },
       ],
     });
   },
@@ -51,12 +61,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.welcome {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
 </style>
 
